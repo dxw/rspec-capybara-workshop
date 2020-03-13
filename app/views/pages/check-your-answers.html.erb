@@ -1,0 +1,35 @@
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h1 class="govuk-heading-xl">Check your answers before sending your choice</h1>
+
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Favourite ice cream
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Vanilla
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <%= link_to "Change", page_path("form"), class: "govuk-link" %>
+        </dd>
+      </div>
+    </dl>
+
+
+    <h2 class="govuk-heading-m">Now send your choice</h2>
+
+    <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+    <form action="<%= page_path("confirmation") %>" method="get" novalidate>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Accept and send
+      </button>
+
+    </form>
+
+  </div>
+</div>

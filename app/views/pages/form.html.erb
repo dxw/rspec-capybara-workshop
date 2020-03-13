@@ -1,0 +1,25 @@
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="<%= page_path("check-your-answers") %>" method="get" novalidate>
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--xl" for="ice_cream">
+            What is your favourite ice cream?
+          </label>
+        </h1>
+        <div class="govuk-form-group">
+          <select class="govuk-select" id="ice_cream" name="ice_cream">
+            <option>Chocolate</option>
+            <option selected>Vanilla</option>
+            <option>Raspberry Ripple</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
