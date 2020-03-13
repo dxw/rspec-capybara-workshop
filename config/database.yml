@@ -1,6 +1,6 @@
 default: &default
   adapter: postgresql
-  url: <%= ENV["DATABASE_URL"] %>
+  url: postgres://postgres@localhost:5432/rspec-capybara-workshop
   encoding: unicode
   template: template0
   pool: <%= Integer(ENV.fetch('RAILS_MAX_THREADS') { 5 }) %>
@@ -10,6 +10,7 @@ development:
 
 test:
   <<: *default
+  url: postgres://postgres@localhost:5432/rspec-capybara-workshop_test
 
 production:
   <<: *default
