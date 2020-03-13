@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "webdrivers"
+
 Capybara.asset_host = "http://localhost:3000"
 
 Capybara.register_driver :headless_chrome do |app|
