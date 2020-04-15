@@ -4,11 +4,11 @@ feature "Ice cream selection" do
   scenario "Users can choose an ice cream preference", js: true do
     visit root_path
 
-    expect(page).to have_content("Service name goes here")
+    expect(page).to have_content("National ice cream survey")
     click_on "Start now"
 
-    expect(page).to have_content("What is your favourite ice cream?")
-    select "Chocolate", from: "What is your favourite ice cream?"
+    # NEW TEST FOR ICE CREAM PAGE GOES HERE
+    expect(page).to have_content("Question goes here")
     click_on "Continue"
 
     expect(page).to have_content("Check your answers before sending your choice")
