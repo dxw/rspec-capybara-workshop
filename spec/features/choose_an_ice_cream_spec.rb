@@ -4,7 +4,7 @@ feature "Ice cream selection" do
   scenario "Users can choose an ice cream preference", js: true do
     visit root_path
 
-    expect(page).to have_content("Service name goes here")
+    expect(page).to have_content("National ice cream survey")
     click_on "Start now"
 
     expect(page).to have_content("What is your favourite ice cream?")
