@@ -1,10 +1,9 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+## 1.0.0
+Setup project so it is in the desired start state for the beginning of the
+workshop.
 
-The format is based on [Keep a Changelog 1.0.0].
-
-## [Unreleased]
-
-[unreleased]: TODO
-[keep a changelog 1.0.0]: https://keepachangelog.com/en/1.0.0/
+- Sample text added on form page
+- Guidance added on what type of question needs adding and what it should be called
+- Test is stripped back so it can be built upon
