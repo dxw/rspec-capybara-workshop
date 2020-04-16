@@ -5,7 +5,7 @@
       <div class="govuk-form-group <%= "govuk-form-group--error" if @survey.errors.key?(:ice_cream) %>">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--xl" for="ice_cream">
-            Question goes here
+            <%= t("ice_cream_question") %>
           </label>
         </h1>
         <% @survey.errors[:ice_cream].each do |error| %>
@@ -14,8 +14,11 @@
           </span>
         <% end %>
         <div class="govuk-form-group">
-          Drop down with and id and name of `ice_cream` goes here
-          <input type="hidden" name="ice_cream" value="Vanilla">
+          <select class="govuk-select" id="ice_cream" name="ice_cream">
+            <option>Chocolate</option>
+            <option selected>Vanilla</option>
+            <option>Raspberry Ripple</option>
+          </select>
         </div>
       </div>
 
