@@ -7,8 +7,8 @@ feature "Ice cream selection" do
     expect(page).to have_content("National ice cream survey")
     click_on "Start now"
 
-    # NEW TEST FOR ICE CREAM PAGE GOES HERE
-    expect(page).to have_content("Question goes here")
+    expect(page).to have_content("What is your favourite ice cream?")
+    select "Chocolate", from: "What is your favourite ice cream?"
     click_on "Continue"
 
     expect(page).to have_content("Check your answers before sending your choice")
