@@ -8,7 +8,7 @@ feature "Ice cream selection" do
     click_on "Start now"
 
     expect(page).to have_content(I18n.t("ice_cream_question"))
-    select "Chocolate", from: "What is your favourite ice cream?"
+    choose "Chocolate"
     click_on "Continue"
 
     expect(page).to have_content("Check your answers before sending your choice")

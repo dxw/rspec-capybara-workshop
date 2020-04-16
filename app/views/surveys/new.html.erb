@@ -2,24 +2,39 @@
   <div class="govuk-grid-column-two-thirds">
     <%= form_with(url: surveys_path, local: true) do %>
 
-      <div class="govuk-form-group <%= "govuk-form-group--error" if @survey.errors.key?(:ice_cream) %>">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--xl" for="ice_cream">
-            <%= t("ice_cream_question") %>
-          </label>
-        </h1>
-        <% @survey.errors[:ice_cream].each do |error| %>
-          <span id="passport-issued-error" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span> <%= error %>
-          </span>
-        <% end %>
-        <div class="govuk-form-group">
-          <select class="govuk-select" id="ice_cream" name="ice_cream">
-            <option>Chocolate</option>
-            <option selected>Vanilla</option>
-            <option>Raspberry Ripple</option>
-          </select>
-        </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              <%= t("ice_cream_question") %>
+            </h1>
+          </legend>
+          <% @survey.errors[:ice_cream].each do |error| %>
+            <span id="passport-issued-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> <%= error %>
+            </span>
+          <% end %>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ice_cream" name="ice_cream" type="radio" value="Chocolate">
+              <label class="govuk-label govuk-radios__label" for="ice_cream">
+                Chocolate
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ice_cream_2" name="ice_cream" type="radio" value="Vanilla">
+              <label class="govuk-label govuk-radios__label" for="ice_cream_2">
+                Vanilla
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ice_cream_3" name="ice_cream" type="radio" value="Raspberry Ripple">
+              <label class="govuk-label govuk-radios__label" for="ice_cream_3">
+                Raspberry Ripple
+              </label>
+            </div>
+          </div>
+        </fieldset>
       </div>
 
       <button class="govuk-button" data-module="govuk-button">
