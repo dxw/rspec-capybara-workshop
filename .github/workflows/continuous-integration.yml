@@ -17,7 +17,7 @@ jobs:
           ruby-version: ${{ env.RUBY_VERSION }}
       - name: Install dependencies
         run: |
-          sudo apt-get install libpq-dev
+          sudo apt-get install libsqlite3-dev
           gem install bundler
           bundle install --jobs 4 --retry 3
       - name: Set up the test database
