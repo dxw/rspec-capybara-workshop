@@ -13,7 +13,10 @@
 3. get it running using the following terminal commands
   `rails db:setup`
   `bundle exec rspec`
-  Visit `localhost:3000` to view the service
+
+4. get it running using the following terminal commands
+  `bundle exec rails server`
+   Visit `localhost:3000` to view the service.
 
 ## Running the tests
 
