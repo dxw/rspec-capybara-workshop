@@ -1,16 +1,16 @@
 default: &default
-  adapter: postgresql
-  url: postgres://postgres@localhost:5432/rspec-capybara-workshop
-  encoding: unicode
-  template: template0
-  pool: <%= Integer(ENV.fetch('RAILS_MAX_THREADS') { 5 }) %>
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
 
 development:
   <<: *default
+  database: db/development.sqlite3
 
 test:
   <<: *default
-  url: postgres://postgres@localhost:5432/rspec-capybara-workshop_test
+  database: db/test.sqlite3
 
 production:
   <<: *default
+  database: db/production.sqlite3
