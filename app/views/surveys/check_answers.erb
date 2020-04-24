@@ -9,10 +9,10 @@
           Favourite ice cream
         </dt>
         <dd class="govuk-summary-list__value">
-          Vanilla
+          <%= @survey.ice_cream %>
         </dd>
         <dd class="govuk-summary-list__actions">
-          <%= link_to "Change", page_path("form"), class: "govuk-link" %>
+          <%= link_to "Change", "#", class: "govuk-link" %>
         </dd>
       </div>
     </dl>

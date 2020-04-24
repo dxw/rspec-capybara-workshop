@@ -1,15 +1,21 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="<%= page_path("check-your-answers") %>" method="get" novalidate>
+    <%= form_with(url: surveys_path, local: true) do %>
 
-      <div class="govuk-form-group">
+      <div class="govuk-form-group <%= "govuk-form-group--error" if @survey.errors.key?(:ice_cream) %>">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--xl" for="ice_cream">
             Question goes here
           </label>
         </h1>
+        <% @survey.errors[:ice_cream].each do |error| %>
+          <span id="passport-issued-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> <%= error %>
+          </span>
+        <% end %>
         <div class="govuk-form-group">
           Drop down with and id and name of `ice_cream` goes here
+          <input type="hidden" name="ice_cream" value="Vanilla">
         </div>
       </div>
 
@@ -17,6 +23,6 @@
         Continue
       </button>
 
-    </form>
+    <% end %>
   </div>
 </div>
