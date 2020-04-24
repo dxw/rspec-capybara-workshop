@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Ruby 2.6.2 - `brew install rbenv && rbenv install 2.6.3`
+- Ruby 2.6.3 - `brew install rbenv && rbenv install 2.6.3`
 - Bundler - `gem install bundler`
 
 ## Installation
