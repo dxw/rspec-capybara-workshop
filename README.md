@@ -1,32 +1,30 @@
 # Getting started
 
-1. clone the repo into a desired folder using clone the repo using
-  `git clone git@github.com:dxw/rspec-capybara-workshop.git`
+## Prerequisites
 
-2. install prerequisites using the following terminal commands
-  `brew install rbenv`
-  `rbenv install 2.6.3`
-  `gem install bundler:2.0.2`
-  `bundle install`
-  `yarn install`
+- Ruby 2.6.2 - `brew install rbenv && rbenv install 2.6.3`
+- Bundler - `gem install bundler`
 
-3. get it running using the following terminal commands
-  `rails db:setup`
-  `bundle exec rspec`
+## Installation
 
-4. get it running using the following terminal commands
-  `bundle exec rails server`
-   Visit `localhost:3000` to view the service.
+1. Clone the repo into a desired folder
+  - `git clone git@github.com:dxw/rspec-capybara-workshop.git`
+
+2. Install the dependencies
+  - `bundle install`
+  - `yarn install`
+
+3. Prepare the database
+  - `bundle exec rails db:setup`
+
+4. Run the web server
+  - `bundle exec rails server`
+  - Visit `http://localhost:3000` to view the service
 
 ## Running the tests
 
-Enter `bundle exec rspec` to run the tests.
-Edit `spec>features>choose_an_ice_cream_spec.rb` to amend the tests
-
-## Releasing changes
-
-When making a new release, update the [changelog](CHANGELOG.md) in the release
-pull request.
+Run `bundle exec rspec` to run the test suite.
+Edit `spec/features/choose_an_ice_cream_spec.rb` to amend the tests.
 
 ## Source
 
