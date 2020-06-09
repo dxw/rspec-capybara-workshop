@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# script/setup: Set up application for the first time.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+script/bootstrap
+
+echo "==> Setting up DB…"
+
+bin/rake db:create db:reset
+
+echo "==> App is now ready to go!"
