@@ -10,20 +10,16 @@
 1. Clone the repo into a desired folder
   - `git clone git@github.com:dxw/rspec-capybara-workshop.git`
 
-2. Install the dependencies
-  - `bundle install`
-  - `yarn install`
-
-3. Prepare the database
-  - `bundle exec rails db:setup`
+2. Install the dependencies and prepare the database
+  - `script/setup`
 
 4. Run the web server
-  - `bundle exec rails server`
+  - `script/server`
   - Visit `http://localhost:3000` to view the service
 
 ## Running the tests
 
-Run `bundle exec rspec` to run the test suite.
+Run `script/test` to run the test suite.
 Edit `spec/features/choose_an_ice_cream_spec.rb` to amend the tests.
 
 ## Source
