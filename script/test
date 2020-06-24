@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# script/test: Run test suite for application.
+
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+script/update
+
+echo "==> Running tests…"
+
+bundle exec rspec "$@"
